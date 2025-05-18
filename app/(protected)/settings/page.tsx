@@ -3,6 +3,8 @@ import {auth, signOut} from "@/auth"
 const SettingsPage = async () => {
     const session = await auth();
 
+    console.log(session?.user.role)
+
     return (
         <div className="flex flex-col items-center justify-center h-screen">
             {JSON.stringify(session)}
